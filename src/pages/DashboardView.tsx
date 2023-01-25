@@ -1,15 +1,15 @@
 import React,{useState, useEffect} from 'react';
 import useDraggable from './useDraggable';
 
-const Setbox = (id: string, top: string, left: string, title: string) => {
+const Setbox = (aha : {id: string, top: string, left: string, title: string}) => {
 
-    useDraggable(id.id);
+    // console.log(aha.id)
 
-    const buttonHandler = (e: MouseEvent) => {
-        // console.log('click');
-        const button: HTMLButtonElement = e.currentTarget;
+    useDraggable(aha.id);
 
-        const box: HTMLDIvElement = e.currentTarget;
+    const buttonHandler = (e) => {
+
+        const box: HTMLDivElement = e.target;
 
         console.log("top:",box.style.top);
         console.log("left:",box.style.left);
@@ -27,8 +27,8 @@ const Setbox = (id: string, top: string, left: string, title: string) => {
     };
     
     return (
-        <div onClick={buttonHandler} id={id.id} className="box_area" style={{top: `${id.top}px`, left: `${id.left}px`}}>
-            {id.title}
+        <div onClick={buttonHandler} id={aha.id} className="box_area" style={{top: `${aha.top}px`, left: `${aha.left}px`}}>
+            {aha.title}
         </div>
     )
 }
@@ -69,13 +69,12 @@ const DashboardView = () => {
                     panels.map((data,i) => {
 
                     return (
-                        
+
                         <Setbox key={i} id={data.id} top={data.startY} left={data.startX} title={data.title}/>
                         
                     )})
                 }
 
-                {/* <Setbox id={'1'} top={"123px"} left={"88"} title={"satu"}/> */}
                
             </div>
         </main>
