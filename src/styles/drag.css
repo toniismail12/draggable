@@ -11,8 +11,8 @@ main {
     position: relative;
     border: 1px solid black;
     height: 800px;
-    width: 800px;
-    overflow: hidden;
+    width: 950px;
+    /* overflow: hidden; */
   }
   
   .box_area {

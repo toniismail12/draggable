@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React,{useState, useEffect} from 'react';
 import useDraggable from './useDraggable';
 
@@ -36,9 +37,9 @@ const Setbox = (aha : {id: string, top: string, left: string, title: string}) =>
 const DashboardView = () => {
 
     const panels_array = [
-        {"id": 0, "startX": 0, "startY": 0, "title": "satu"},
-        {"id": 1, "startX": 370, "startY": 235, "title": "dua"},
-        {"id": 2, "startX": 724, "startY": 14, "title": "tiga"},
+        {"id": 0, "startX": 173, "startY": 276, "title": "satu"},
+        {"id": 1, "startX": 330, "startY": 281, "title": "dua"},
+        {"id": 2, "startX": 491, "startY": 282, "title": "tiga"},
     ]
 
     const [panels, setPanels] = useState([]);
@@ -65,6 +66,12 @@ const DashboardView = () => {
 
             <div className='container_area'>
 
+                <Image
+                    src="/DIAGRAM_PROSES_UREA.png"
+                    alt="picture of dcs"
+                    width={950}
+                    height={800}
+                />
                 {
                     panels.map((data,i) => {
 
