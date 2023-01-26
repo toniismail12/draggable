@@ -10,8 +10,8 @@ main {
   .container_area {
     position: relative;
     border: 1px solid black;
-    height: 800px;
-    width: 950px;
+    height: 700px;
+    width: 1000px;
     /* overflow: hidden; */
   }
   
@@ -19,7 +19,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 20px;
     width: 60px;
     cursor: pointer;
     background-color: hotpink;
